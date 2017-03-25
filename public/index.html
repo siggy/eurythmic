@@ -209,8 +209,8 @@
         document.getElementById("no").style.display="block";
         document.getElementById("yes").style.display="none";
       } else {
-        window.addEventListener("deviceorientation", handleOrientation);
-        window.addEventListener("devicemotion", handleMotion);
+        window.addEventListener("deviceorientation", handleOrientation, false);
+        window.addEventListener("devicemotion", handleMotion, false);
 
         function d2h(d) {return d.toString(16);}
         function h2d(h) {return parseInt(h,16);}

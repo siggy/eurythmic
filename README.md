@@ -1,6 +1,6 @@
 # eurythmic
 
-Harmonious devices. Inspired by https://github.com/MylesBorins/harmonic
+Harmonious devices. Inspired by https://github.com/MylesBorins/harmonic.
 
 ## Setup
 
@@ -11,8 +11,13 @@ npm install
 ## Run
 
 ```bash
-node index.js
+node app.js
 ```
 
 - Open http://[LOCAL_IP]:3000 on a phone
 - Open http://localhost:3000/voltron locally
+
+## TODO
+
+- Visualizer
+- Colorwheel on client
