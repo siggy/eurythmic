@@ -1,13 +1,19 @@
 {
   "name": "eurythmic",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/siggy/eurythmic.git"
+  },
   "description": "harmonious devices",
-  "repo": "https://github.com/siggy/eurythmic",
   "dependencies": {
-    "compression": "^1.6.2",
-    "express": "^4.13.4",
-    "socket.io": "^1.4.6"
+    "express": "^4.15.2",
+    "socket.io": "^1.7.3"
   },
   "author": "Andrew Seigner <andrew@sig.gy>",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": "v6.10.1",
+    "npm": "4.4.1"
+  }
 }

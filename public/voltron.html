@@ -1,8 +1,6 @@
 <!doctype html>
 <html>
-  <head>
-    <!-- <link rel="stylesheet" type="text/css" href="/main.css"> -->
-  </head>
+  <head></head>
   <body>
     <div id="content" class="flexbox">
     </div>
@@ -16,9 +14,8 @@
       var socket = io('/voltron');
 
       socket.on('ondevicemotion', function(motion) {
-        console.log(motion);
+        console.log(JSON.stringify(motion));
         document.getElementById("content").innerHTML = "motion: " + JSON.stringify(motion);
-        // console.log(motion);
       });
 
       </script>
