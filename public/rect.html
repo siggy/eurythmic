@@ -37,9 +37,21 @@
       var flat2 = document.getElementById("flat2"),
           flat2Style = flat2.style;
 
-      _transform && window.addEventListener("deviceorientation", function(e) {
+      _transform &&
+      window.addEventListener("deviceorientation", function(e) {
         flatStyle[_transform] = "perspective(500px) rotateY("+(-e.gamma)+"deg) rotateX("+e.beta+"deg) rotateZ("+-(e.alpha-180)+"deg)";
-        flat2Style[_transform] = "perspective(500px) rotateZ("+(e.alpha-180)+"deg) rotateX("+e.beta+"deg) rotateY("+(-e.gamma)+"deg)";
+        // flat2Style[_transform] = "perspective(500px) rotateZ("+(e.alpha-180)+"deg) rotateX("+e.beta+"deg) rotateY("+(-e.gamma)+"deg)";
+      }) &&
+      window.addEventListener("devicemotion", function(e) {
+
+        // acceleration: event.acceleration,
+        // accelerationIncludingGravity: event.accelerationIncludingGravity,
+        // rotationRate: event.rotationRate,
+        // interval: event.interval
+console.log(event.rotationRate);
+        // flatStyle[_transform] = "perspective(500px) rotateY("+(-e.gamma)+"deg) rotateX("+e.beta+"deg) rotateZ("+-(e.alpha-180)+"deg)";
+        // flat2Style[_transform] = "perspective(500px) rotateZ("+(e.alpha-180)+"deg) rotateX("+e.beta+"deg) rotateY("+(-e.gamma)+"deg)";
+        flat2Style[_transform] = "perspective(500px) rotateY("+(-e.rotationRate.gamma)+"deg) rotateX("+e.rotationRate.beta+"deg) rotateZ("+-(e.rotationRate.alpha-180)+"deg)";
       });
     </script>
   </body>
