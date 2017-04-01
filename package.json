@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/siggy/eurythmic.git"
+    "url": "git+https://github.com/siggy/eurythmic.git"
   },
   "description": "harmonious devices",
   "dependencies": {
@@ -15,5 +15,17 @@
   "engines": {
     "node": "v6.10.1",
     "npm": "4.4.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/siggy/eurythmic/issues"
+  },
+  "homepage": "https://github.com/siggy/eurythmic#readme",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "harmony"
+  ]
 }
