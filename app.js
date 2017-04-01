@@ -18,11 +18,11 @@ io.on('connection', function(socket){
 
   console.log('a user connected: ' + socket.id);
 
-  socket.on('ondevicemotion', function(motion) {
-    console.log(this.id + ": " + JSON.stringify(motion));
+  socket.on('phone', function(phone) {
+    console.log(this.id + ": " + JSON.stringify(phone));
 
-    motion.socket = socket.id;
-    voltron.emit('ondevicemotion', motion);
+    phone.id = socket.id;
+    voltron.emit('phone', phone);
   });
 });
 
