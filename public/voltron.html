@@ -34,15 +34,17 @@
       var socket = io('/voltron');
 
       socket.on('phone', function(phone) {
-        console.log(JSON.stringify(phone));
+        flatStyle.background = phone.rgb;
         if (phone.motion) {
-          e = phone.motion;
-          // flatStyle[_transform] = "perspective(500px) translate3d("+e.acceleration.x*100+"px,"+e.acceleration.y*100+"px,"+e.acceleration.z*100+"px)";
+          // TODO: handle motion
+          // flatStyle[_transform] = "perspective(500px) translate3d("+phone.motion.acceleration.x*100+"px,"+v.acceleration.y*100+"px,"+phone.motion.acceleration.z*100+"px)";
         } else if (phone.orientation) {
-          e = phone.orientation;
-          flatStyle[_transform]  = "perspective(500px) rotateY("+(-e.gamma)+"deg)    rotateX("+e.beta+"deg) rotateZ("+-(e.alpha-180)+"deg)";
+          flatStyle[_transform] =
+            "perspective(500px) " +
+            "rotateY("+(-phone.orientation.gamma)+"deg) "+
+            "rotateX("+phone.orientation.beta+"deg) " +
+            "rotateZ("+-(phone.orientation.alpha-180)+"deg)";
         }
-        document.getElementById("content").innerHTML = "phone: " + JSON.stringify(phone);
       });
     </script>
   </body>

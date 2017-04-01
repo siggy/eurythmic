@@ -19,8 +19,6 @@ io.on('connection', function(socket){
   console.log('a user connected: ' + socket.id);
 
   socket.on('phone', function(phone) {
-    console.log(this.id + ": " + JSON.stringify(phone));
-
     phone.id = socket.id;
     voltron.emit('phone', phone);
   });
