@@ -14,10 +14,5 @@ npm install
 node app.js
 ```
 
-- Open http://[LOCAL_IP]:3000 on a phone
-- Open http://localhost:3000/voltron locally
-
-## TODO
-
-- Visualizer
-- Colorwheel on client
+- Open http://[LOCAL_IP]:3210 on all the phones
+- Open http://localhost:3210/voltron.html on a desktop
