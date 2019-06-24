@@ -49,6 +49,15 @@
         window.addEventListener("deviceorientation", handleOrientation, false);
         window.addEventListener("devicemotion", handleMotion, false);
 
+        const id = setTimeout(() => alert('Enable device orientation in Settings > Safari > Motion & Orientation Access.'), 2000);
+        window.addEventListener(
+          'deviceorientation',
+          event => {
+            clearTimeout(id);
+          },
+          false
+        );
+
         // from https://github.com/bgrins/colorwheel-1k/
         var canvas = document.getElementsByTagName('canvas')[0];
         var context2d = canvas.getContext('2d');
